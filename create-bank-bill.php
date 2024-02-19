@@ -71,7 +71,7 @@ if ($_SESSION['email']) {
 </head>
 
 <body>
-    <div class="modal" id="modal">
+    <!-- <div class="modal" id="modal">
         <div class="modal-content">
             <h2>Vui lòng nhấn Ctrl + F5 để refresh trang</h2>
             <p>Đã xảy ra lỗi trong quá trình xử lý. Vui lòng nhấn CTRL + F5</p>
@@ -89,7 +89,7 @@ if ($_SESSION['email']) {
             // Lưu thông tin đăng nhập vào localStorage
             localStorage.setItem('lastLoginDate', currentDate);
         }
-    </script>
+    </script> -->
     <!-- <div class="ruler"></div>
     <div class="ruler_doc"></div>
     <div class="ruler_doc2"></div> -->
@@ -1015,7 +1015,7 @@ if ($_SESSION['email']) {
                                         </div>
                                         <div>
                                             <label class="form-label">Thời gian chuyển tiền <span class="data_auto">(*)</span></label>
-                                            <input type="text" class="form-control" id="input_time-sacombank" placeholder="14:09:47 08/02/2023" value='<?php echo date('h:i:s d/m/Y') ?>'>
+                                            <input type="text" class="form-control" id="input_time-sacombank" placeholder="14:09:47 08/02/2023" value='<?php echo date('H:i:s d/m/Y') ?>'>
                                         </div>
                                         <div>
                                             <label class="form-label">Mã giao dịch (10 số) <span class="data_auto">(*)</span></label>

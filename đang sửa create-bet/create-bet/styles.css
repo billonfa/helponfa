@@ -1,0 +1,738 @@
+/* Slide */
+.carousel-control-prev {
+    margin-left: -100px;
+}
+
+.carousel-control-next {
+    margin-right: -100px;
+}
+
+.carousel {
+    width: 400px;
+    margin: 0px auto;
+}
+
+.carousel-indicators {
+    background-color: black;
+}
+
+.carousel-indicators [data-bs-target] {
+    color: red;
+    height: 30px;
+    border-radius: 68%;
+    text-indent: 0;
+}
+
+@font-face {
+    font-family: 'din';
+    src: url('font/NeueDINTrialSemiCond-Black-BF63c6170310507.otf') format('opentype');
+
+}
+
+@font-face {
+    font-family: 'din1';
+    src: url('font/NeueDINTrialSemiCond-Medium-BF63c6170a56c87.otf') format('opentype');
+}
+
+#loading-center {
+    background: url('photo-bet/gif_loaderR43.png') no-repeat scroll 50%;
+    background-size: 20%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* Form */
+.form-label {
+    margin: 0.8rem 0;
+}
+
+.form-control {
+    float: right;
+    text-align: center;
+    display: inline-block;
+    width: 55%;
+    padding: 0.5rem 0.9rem;
+    font-size: 0.8125rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--vz-body-color);
+    background-color: var(--vz-input-bg);
+    background-clip: padding-box;
+    border: 1px solid var(--vz-input-border);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.25rem;
+    -webkit-transition: border-color 0.15s ease-in-out,
+        -webkit-box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out,
+        -webkit-box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+        -webkit-box-shadow 0.15s ease-in-out;
+}
+
+.select {
+    width: 55%;
+    padding: 8px;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+    font-size: 16px;
+    color: #555;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, #555 50%),
+        linear-gradient(135deg, #555 50%, transparent 50%),
+        linear-gradient(to right, #ccc, #ccc);
+    background-position: calc(100% - 20px) calc(1em + 2px),
+        calc(100% - 15px) calc(1em + 2px), 100% 0;
+    background-size: 5px 5px, 5px 5px, 2.5em 2.5em;
+    background-repeat: no-repeat;
+    float: right;
+    text-align: center;
+}
+
+/* End Form */
+/* --------------------------------- Refresh ------------------------------------ */
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.modal-content {
+    width: 80%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    margin: 20% auto;
+}
+
+/* Loading */
+.overlay {
+    background-color: #f9fbfe;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    margin-top: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow: hidden !important;
+    opacity: 0.8;
+    right: 0;
+    z-index: 999999;
+}
+
+.br_ngang1 {
+    position: absolute;
+    max-width: 5px;
+    height: 55%;
+    background: black;
+    border-radius: 16px;
+    left: 50%;
+    padding: 0;
+    margin-top: 35px;
+}
+
+@keyframes loading {
+    0% {
+        transform: scaleY(0.1);
+    }
+
+    50% {
+        transform: scaleY(1);
+    }
+
+    100% {
+        transform: scaleY(0.1);
+    }
+}
+
+/* Sóng điện thoại sim 1 */
+.background_white {
+    background: white;
+}
+
+.background_black {
+    background: black;
+}
+
+.background_invi {
+    background: #cdcdcd;
+}
+
+.signal {
+    height: 20px;
+    width: 40px;
+    position: absolute;
+    top: 7.5px;
+    left: 300px;
+    z-index: 1;
+}
+
+.bar {
+    width: 3.5px;
+    border-radius: 1.5px;
+    position: absolute;
+    bottom: 0;
+}
+
+.bar:nth-child(1) {
+    height: 4.8px;
+    left: 4px;
+}
+
+.bar:nth-child(2) {
+    height: 7px;
+    left: 9px;
+}
+
+.bar:nth-child(3) {
+    height: 9.7px;
+    left: 14px;
+}
+
+.bar:nth-child(4) {
+    height: 11.9px;
+    left: 19px;
+}
+
+.signal_invi {
+    height: 20px;
+    width: 40px;
+    position: absolute;
+    top: 7.5px;
+    left: 300px;
+    z-index: 1;
+}
+
+/*----------------------------------------------------- Sóng điện thoại sim 2 ----------------------------------------------------- */
+.signal-1 {
+    height: 20px;
+    width: 40px;
+    position: absolute;
+    top: 3px;
+    left: 300px;
+    z-index: 1;
+}
+
+.bar-1 {
+    width: 3px;
+    border-radius: 1.2px;
+    position: absolute;
+    bottom: 0;
+}
+
+.bar-1:nth-child(1) {
+    height: 4px;
+    left: 4px;
+}
+
+.bar-1:nth-child(2) {
+    height: 5px;
+    left: 8.6px;
+}
+
+.bar-1:nth-child(3) {
+    height: 6.3px;
+    left: 13.2px;
+}
+
+.bar-1:nth-child(4) {
+    height: 7.8px;
+    left: 17.8px;
+}
+
+.signal2 {
+    height: 20px;
+    width: 40px;
+    position: absolute;
+    top: 8px;
+    left: 300px;
+    z-index: 1;
+}
+
+.bar2 {
+    width: 3px;
+    height: 3.7px;
+    border-radius: 1.2px;
+    position: absolute;
+    bottom: 0;
+}
+
+.bar2:nth-child(1) {
+    left: 4px;
+}
+
+.bar2:nth-child(2) {
+    left: 8.6px;
+}
+
+.bar2:nth-child(3) {
+    left: 13.2px;
+}
+
+.bar2:nth-child(4) {
+    left: 17.8px;
+}
+
+.data_auto {
+    color: red;
+}
+
+/* Wifi */
+.wifi {
+    width: 18px;
+    position: absolute;
+    top: 11px;
+    left: 329px;
+    z-index: 1;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.img_wifi {
+    width: 100%;
+}
+
+/* ------------------- Pin ------------------ */
+.battery-level {
+    position: absolute;
+    border-radius: 2px;
+    height: 9.4px;
+    width: 20.7px;
+    top: 16.9px;
+    left: 354px;
+}
+
+.ruler {
+    position: fixed;
+    top: 600px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: black;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+.ruler_doc {
+    position: fixed;
+    top: 0;
+    left: 380px;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 100%;
+    background-color: black;
+    z-index: 1;
+}
+
+.ruler_doc2 {
+    position: fixed;
+    top: 0;
+    left: 800px;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 100%;
+    background-color: black;
+    z-index: 1;
+}
+
+.container_box {
+    display: flex;
+}
+
+.box {
+    margin: 10px;
+}
+
+.demo_image-container {
+    position: relative;
+    width: 400px;
+}
+
+.create-image-container {
+    position: relative;
+    width: 400px;
+}
+
+.photo_style {
+    width: 100%;
+}
+
+.image-caption {
+    position: absolute;
+    font-size: 18px;
+    top: 10px;
+    left: 20px;
+    color: #e6eaf2;
+    font-weight: 500;
+    font-family: system-ui;
+}
+
+.custom-icon {
+    position: absolute;
+    top: 11px;
+    left: 67px;
+    width: 10px;
+}
+
+.custom-icon2 {
+    position: absolute;
+    top: 13px;
+    left: 67px;
+    width: 10px;
+}
+
+/* ----------------------------------------------- Css cho đơn cược Casino -----------------------------------------------*/
+.time-bet1 {
+    position: absolute;
+    top: 10px;
+    left: 24px;
+    color: black;
+    font-size: 15px;
+    width: 46px;
+    font-family: system-ui;
+    font-weight: 700;
+    z-index: 1;
+}
+
+.br_game {
+    height: 3px;
+    background-color: black;
+    width: 90%;
+    margin: 10px auto;
+}
+
+.battery-level-3 {
+    position: absolute;
+    border-radius: 2px;
+    height: 9.5px;
+    width: 20.7px;
+    top: 17px;
+    left: 355.4px;
+}
+
+.date-b3 {
+    position: absolute;
+    top: 160px;
+    left: 37px;
+    z-index: 1;
+    width: 90px;
+    font-size: 12px;
+    color: #4493cb;
+    text-align: center;
+    font-family: system-ui;
+    font-weight: 500;
+}
+
+.sanh-b3 {
+    position: absolute;
+    top: 161px;
+    left: 133px;
+    z-index: 1;
+    font-family: arial;
+    width: max-content;
+    font-size: 12px;
+    color: #4493cb;
+    text-align: center;
+    font-weight: 700;
+    width: 53px;
+}
+
+/*---------------- G1 /*---------------- */
+.name_g1-b3 {
+    position: absolute;
+    top: 210.5px;
+    left: 54px;
+    z-index: 1;
+    font-family: arial;
+    font-size: 13.5px;
+    text-align: left;
+    width: 159px;
+    font-weight: 700;
+}
+
+.time_g1-b3 {
+    position: absolute;
+    top: 210.5px;
+    left: 241px;
+    z-index: 1;
+    font-size: 13.5px;
+    text-align: left;
+    width: 159px;
+    font-family: system-ui;
+    font-weight: 500;
+}
+
+#trade_code_g1-b3 {
+    position: absolute;
+    top: 261.3px;
+    left: 92px;
+    z-index: 1;
+    font-family: system-ui;
+    font-size: 13.5px;
+    text-align: left;
+    width: 159px;
+    font-weight: 500;
+}
+
+.stdc {
+    position: absolute;
+    top: 288px;
+    left: 142px;
+    z-index: 1;
+    font-family: system-ui;
+    font-size: 13.5px;
+    text-align: left;
+    width: 159px;
+    font-weight: 500;
+}
+
+.dchl {
+    position: absolute;
+    top: 288px;
+    left: 327px;
+    z-index: 1;
+    font-family: system-ui;
+    font-size: 13.5px;
+    text-align: left;
+    width: 159px;
+    font-weight: 500;
+}
+
+.price_g1-b3 {
+    position: absolute;
+    top: 336px;
+    left: 33px;
+    z-index: 1;
+    font-family: arial;
+    font-size: 17px;
+    text-align: left;
+    font-weight: bold;
+    width: 159px;
+    color: #2fe120;
+}
+
+.total_price_g1-b3 {
+    position: absolute;
+    top: 336px;
+    left: 293px;
+    z-index: 1;
+    font-family: arial;
+    font-size: 17px;
+    text-align: left;
+    font-weight: bold;
+    width: 159px;
+    color: #2fe120;
+}
+
+/*---------------- G2 /*---------------- */
+.name_g2-b3 {
+    position: absolute;
+    top: 408.5px;
+    left: 54px;
+    z-index: 1;
+    font-family: arial;
+    font-size: 13.5px;
+    text-align: left;
+    width: 159px;
+    font-weight: 700;
+}
+
+.time_g2-b3 {
+    position: absolute;
+    top: 408.5px;
+    left: 241px;
+    z-index: 1;
+    font-size: 13.5px;
+    text-align: left;
+    width: 159px;
+    font-family: system-ui;
+    font-weight: 500;
+}
+
+#trade_code_g2-b3 {
+    position: absolute;
+    top: 459.8px;
+    left: 92px;
+    z-index: 1;
+    font-family: system-ui;
+    font-size: 13.5px;
+    text-align: left;
+    width: 159px;
+    font-weight: 500;
+}
+
+.stdc-2 {
+    position: absolute;
+    top: 485.5px;
+    left: 142px;
+    z-index: 1;
+    font-family: system-ui;
+    font-size: 13.5px;
+    text-align: left;
+    width: 159px;
+    font-weight: 500;
+}
+
+.dchl-2 {
+    position: absolute;
+    top: 485.5px;
+    left: 327px;
+    z-index: 1;
+    font-family: system-ui;
+    font-size: 13.5px;
+    text-align: left;
+    width: 159px;
+    font-weight: 500;
+}
+
+.price_g2-b3 {
+    position: absolute;
+    top: 534px;
+    left: 33px;
+    z-index: 1;
+    font-family: arial;
+    font-size: 17px;
+    text-align: left;
+    font-weight: bold;
+    width: 159px;
+    color: #2fe120;
+}
+
+.total_price_g2-b3 {
+    position: absolute;
+    top: 534px;
+    left: 293px;
+    z-index: 1;
+    font-family: arial;
+    font-size: 17px;
+    text-align: left;
+    font-weight: bold;
+    width: 159px;
+    color: #2fe120;
+}
+
+/*---------------- G3 /*---------------- */
+.name_g3-b3 {
+    position: absolute;
+    top: 607px;
+    left: 54px;
+    z-index: 1;
+    font-family: arial;
+    font-size: 13.5px;
+    text-align: left;
+    width: 159px;
+    font-weight: 700;
+}
+
+.time_g3-b3 {
+    position: absolute;
+    top: 607px;
+    left: 241px;
+    z-index: 1;
+    font-size: 13.5px;
+    text-align: left;
+    width: 159px;
+    font-family: system-ui;
+    font-weight: 500;
+}
+
+#trade_code_g3-b3 {
+    position: absolute;
+    top: 657.5px;
+    left: 92px;
+    z-index: 1;
+    font-family: system-ui;
+    font-size: 13.5px;
+    text-align: left;
+    width: 159px;
+    font-weight: 500;
+}
+
+.stdc-3 {
+    position: absolute;
+    top: 684px;
+    left: 142px;
+    z-index: 1;
+    font-family: system-ui;
+    font-size: 13.5px;
+    text-align: left;
+    width: 159px;
+    font-weight: 500;
+}
+
+.dchl-3 {
+    position: absolute;
+    top: 684px;
+    left: 327px;
+    z-index: 1;
+    font-family: system-ui;
+    font-size: 13.5px;
+    text-align: left;
+    width: 159px;
+    font-weight: 500;
+}
+
+.price_g3-b3 {
+    position: absolute;
+    top: 733px;
+    left: 33px;
+    z-index: 1;
+    font-family: arial;
+    font-size: 17px;
+    text-align: left;
+    font-weight: bold;
+    width: 159px;
+    color: #2fe120;
+}
+
+.total_price_g3-b3 {
+    position: absolute;
+    top: 733px;
+    left: 293px;
+    z-index: 1;
+    font-family: arial;
+    font-size: 17px;
+    text-align: left;
+    font-weight: bold;
+    width: 159px;
+    color: #2fe120;
+}
+
+.img_icon_money {
+    width: 21px;
+    margin-bottom: 4px;
+    display: inline-block;
+}
+
+.background_white {
+    background: white;
+}
+
+.background_black {
+    background: black;
+}
+
+.background_invi {
+    background: #7a7a7a;
+}

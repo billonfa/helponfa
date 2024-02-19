@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Checkbox và Text trong khung chữ nhật</title>
+  <style>
+    .container {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+.rectangle {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.rectangle label {
+  margin: 10px;
+}
+
+button {
+
+  padding: 10px 20px;
+}
+.nut-bam a:hover {
+background: #03A9F4 !important;
+color: white !important;
+border-radius:5px;
+}
+
+.nut-bam a:link, .nut-bam a:visited {
+width: fit-content;
+padding: 0.5em 1em;
+text-align: center;
+float: inherit;
+margin: 0em auto;
+color: #ffffff;
+background: #00000026;
+border-radius:5px;
+}
+  </style>
+</head>
+<body>
+    <div style="position: relative;">
+        <img src="ab.jpg" style="max-width: 100%"/>
+        <div class="container">
+            <div class="rectangle">
+                <input type="checkbox" id="checkbox">
+                <label for="checkbox">Xác minh robot</label>
+            </div>
+            <button id="button" class="nut-bam" disabled><span style="font-family: arial;">Tham gia nhóm</span></button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var checkbox = document.getElementById("checkbox");
+            var button = document.getElementById("button");
+
+            checkbox.addEventListener("change", function() {
+                button.disabled = !checkbox.checked;
+            });
+
+            button.addEventListener("click", function() {
+                window.location.href = "https://example.com"; // Thay thế đường link tại đây
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,956 @@
+@charset "UTF-8";@font-face {
+    font-family: DIN;
+    src: url("../fonts/DIN Alternate Bold.ffc957e1.ttf");
+    font-style: normal
+}
+
+.font-din {
+    font-family: DIN
+}
+
+@font-face {
+    font-family: iconfont;
+    src: url(../fonts/iconfont.ee718c36.eot);
+    src: url(../fonts/iconfont.ee718c36.eot#iefix) format("embedded-opentype"),url(../fonts/iconfont.ce96d738.woff2) format("woff2"),url(../fonts/iconfont.10860117.woff) format("woff"),url(../fonts/iconfont.db917506.ttf) format("truetype"),url(../img/iconfont.a4f88668.svg#iconfont) format("svg")
+}
+
+.iconfont {
+    font-family: iconfont!important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.icon-peishuaibianhua:before {
+    content: "\e78c"
+}
+
+.icon-peishuaibianhua-copy:before {
+    content: "\e889"
+}
+
+.icon-ri-he:before {
+    content: "\e767"
+}
+
+.icon-ri-jujue:before {
+    content: "\e768"
+}
+
+.icon-ri-quxiao:before {
+    content: "\e769"
+}
+
+.icon-ri-shu:before {
+    content: "\e76a"
+}
+
+.icon-ri-shuban:before {
+    content: "\e76b"
+}
+
+.icon-ri-ying:before {
+    content: "\e76c"
+}
+
+.icon-ying-quxiao:before {
+    content: "\e76d"
+}
+
+.icon-ri-yingban:before {
+    content: "\e76e"
+}
+
+.icon-ying-he:before {
+    content: "\e76f"
+}
+
+.icon-ying-shibai:before {
+    content: "\e770"
+}
+
+.icon-ying-yingban:before {
+    content: "\e771"
+}
+
+.icon-ying-ying:before {
+    content: "\e772"
+}
+
+.icon-zhong-he:before {
+    content: "\e773"
+}
+
+.icon-yue-he:before {
+    content: "\e774"
+}
+
+.icon-yue-shu:before {
+    content: "\e775"
+}
+
+.icon-ying-shu:before {
+    content: "\e776"
+}
+
+.icon-zhong-jujue:before {
+    content: "\e777"
+}
+
+.icon-zhong-shuban:before {
+    content: "\e778"
+}
+
+.icon-zhong-ying:before {
+    content: "\e779"
+}
+
+.icon-zhong-quxiao:before {
+    content: "\e77a"
+}
+
+.icon-yue-yingban:before {
+    content: "\e77b"
+}
+
+.icon-yue-jujue:before {
+    content: "\e77c"
+}
+
+.icon-yue-ying:before {
+    content: "\e77d"
+}
+
+.icon-zhong-shu:before {
+    content: "\e77e"
+}
+
+.icon-zhong-yingban:before {
+    content: "\e77f"
+}
+
+.icon-ying-shuban:before {
+    content: "\e780"
+}
+
+.icon-yue-shuban:before {
+    content: "\e781"
+}
+
+.icon-yue-quxiao:before {
+    content: "\e782"
+}
+
+.icon-a-Property1fan-he:before {
+    content: "\e785"
+}
+
+.icon-a-Property1fan-jujue:before {
+    content: "\e78b"
+}
+
+.icon-a-Property1fan-quxiao:before {
+    content: "\e78a"
+}
+
+.icon-a-Property1fan-shu:before {
+    content: "\e789"
+}
+
+.icon-a-Property1fan-yingban:before {
+    content: "\e788"
+}
+
+.icon-a-Property1fan-ying:before {
+    content: "\e787"
+}
+
+.icon-a-Property1fan-shuban:before {
+    content: "\e786"
+}
+
+.icon-gouxuan:before {
+    content: "\e757"
+}
+
+.icon-yayunhui:before {
+    content: "\e68c"
+}
+
+.icon-fanhui:before {
+    content: "\e754"
+}
+
+.icon-bianji:before {
+    content: "\e755"
+}
+
+.icon-shezhi:before {
+    content: "\e756"
+}
+
+.icon-shuaxin:before {
+    content: "\e753"
+}
+
+.icon-top11:before {
+    content: "\e752"
+}
+
+.icon-suopan:before {
+    content: "\e74b"
+}
+
+.icon-shanchu:before {
+    content: "\e74c"
+}
+
+.icon-zhedie:before {
+    content: "\e74d"
+}
+
+.icon-chuishao:before {
+    content: "\e74e"
+}
+
+.icon-top1:before {
+    content: "\e74f"
+}
+
+.icon-a-404:before {
+    content: "\e750"
+}
+
+.icon-weihu:before {
+    content: "\e751"
+}
+
+.icon-paiqiu:before {
+    content: "\e744"
+}
+
+.icon-ganlanqiu:before {
+    content: "\e721"
+}
+
+.icon-aoyunhui:before {
+    content: "\e722"
+}
+
+.icon-feibiao:before {
+    content: "\e723"
+}
+
+.icon-baolingqiu:before {
+    content: "\e724"
+}
+
+.icon-banqiu:before {
+    content: "\e725"
+}
+
+.icon-bingqiu:before {
+    content: "\e726"
+}
+
+.icon-dianzizuqiu:before {
+    content: "\e727"
+}
+
+.icon-pingpangqiu:before {
+    content: "\e728"
+}
+
+.icon-saiche:before {
+    content: "\e729"
+}
+
+.icon-saima:before {
+    content: "\e72a"
+}
+
+.icon-moren:before {
+    content: "\e72b"
+}
+
+.icon-lanqiu:before {
+    content: "\e72c"
+}
+
+.icon-gaoerfu:before {
+    content: "\e72d"
+}
+
+.icon-dianzilanqiu:before {
+    content: "\e72e"
+}
+
+.icon-motuoche:before {
+    content: "\e72f"
+}
+
+.icon-bangqiu:before {
+    content: "\e730"
+}
+
+.icon-zihangche:before {
+    content: "\e731"
+}
+
+.icon-MMA:before {
+    content: "\e732"
+}
+
+.icon-meishizuqiu:before {
+    content: "\e733"
+}
+
+.icon-quanji-1:before {
+    content: "\e734"
+}
+
+.icon-shatanpaiqiu:before {
+    content: "\e735"
+}
+
+.icon-xunilanqiu:before {
+    content: "\e736"
+}
+
+.icon-yumaoqiu:before {
+    content: "\e737"
+}
+
+.icon-F1:before {
+    content: "\e738"
+}
+
+.icon-saigou:before {
+    content: "\e739"
+}
+
+.icon-xunimotuoche:before {
+    content: "\e73a"
+}
+
+.icon-shineiwurenzuqiu:before {
+    content: "\e73b"
+}
+
+.icon-CS_GO:before {
+    content: "\e73c"
+}
+
+.icon-tebiexiangmu:before {
+    content: "\e73d"
+}
+
+.icon-LOL:before {
+    content: "\e73e"
+}
+
+.icon-KOG:before {
+    content: "\e73f"
+}
+
+.icon-shuiqiu:before {
+    content: "\e740"
+}
+
+.icon-zuqiu:before {
+    content: "\e741"
+}
+
+.icon-nidisaichang:before {
+    content: "\e742"
+}
+
+.icon-sinuoke:before {
+    content: "\e743"
+}
+
+.icon-DOTA2:before {
+    content: "\e745"
+}
+
+.icon-xunizuqiu:before {
+    content: "\e746"
+}
+
+.icon-shouqiu:before {
+    content: "\e747"
+}
+
+.icon-wangqiu:before {
+    content: "\e748"
+}
+
+.icon-xunisaiche:before {
+    content: "\e749"
+}
+
+.icon-dibanqiu:before {
+    content: "\e74a"
+}
+
+.icon-duibiao:before {
+    content: "\e720"
+}
+
+.icon-a-Property2guanzhu:before {
+    content: "\e71e"
+}
+
+.icon-a-Property2Property25:before {
+    content: "\e71f"
+}
+
+.icon-zhongzheng:before {
+    content: "\e68b"
+}
+
+.icon-top:before {
+    content: "\e6c9"
+}
+
+.icon-corner:before {
+    content: "\e62a"
+}
+
+.icon-arrow-1:before {
+    content: "\e603"
+}
+
+.icon-arrow-2:before {
+    content: "\e6bc"
+}
+
+.icon-delete:before {
+    content: "\e6cb"
+}
+
+.icon-refresh:before {
+    content: "\e6d2"
+}
+
+.icon-empty:before {
+    content: "\e61d"
+}
+
+.icon-league-default:before {
+    content: "\e61b"
+}
+
+.icon-menu:before {
+    content: "\e61e"
+}
+
+.icon-ht:before {
+    content: "\e61f"
+}
+
+.icon-order:before {
+    content: "\e621"
+}
+
+.icon-arrow-solid:before {
+    content: "\e622"
+}
+
+.icon-success:before {
+    content: "\e66c"
+}
+
+.icon-error:before {
+    content: "\e66d"
+}
+
+.icon-arrow-link:before {
+    content: "\e66f"
+}
+
+.icon-to-top:before {
+    content: "\e670"
+}
+
+.icon-more-paly:before {
+    content: "\e671"
+}
+
+.icon-switch:before {
+    content: "\e672"
+}
+
+.icon-notice:before {
+    content: "\e673"
+}
+
+.icon-open-all:before {
+    content: "\e674"
+}
+
+.icon-close:before {
+    content: "\e676"
+}
+
+.icon-no-match:before {
+    content: "\e677"
+}
+
+.icon-order-close:before {
+    content: "\e67a"
+}
+
+.icon-un-collect:before {
+    content: "\e6cc"
+}
+
+.icon-collect:before {
+    content: "\e6cd"
+}
+
+.icon-video:before {
+    content: "\e6d3"
+}
+
+.icon-statistics:before {
+    content: "\e6d4"
+}
+
+.icon-zuocecaidan:before {
+    content: "\e6d6"
+}
+
+.icon-lock:before {
+    content: "\e6d5"
+}
+
+.icon-arrow-down:before {
+    content: "\e6d7"
+}
+
+.icon-copy:before {
+    content: "\e6db"
+}
+
+.icon-team-default:before {
+    content: "\e683"
+}
+
+.icon-league-default-white:before {
+    content: "\e684"
+}
+
+.icon-jiaoqiu:before {
+    content: "\e687"
+}
+
+.icon-a-bingqiujiashi1:before {
+    content: "\e688"
+}
+
+:root {
+    --theme-text: #2b50e7;
+    --theme-bg: #2b50e7;
+    --q-color-primary: #2b50e7
+}
+
+.text-color-primary {
+    color: var(--theme-text)
+}
+
+.text-color-primary .small-decimal {
+    background: var(--theme-text);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent
+}
+
+.border-color-primary {
+    border: 1px solid var(--theme-text)
+}
+
+.text-dark-0 {
+    color: #131a3e
+}
+
+.bg-dark-0 {
+    background: #131a3e
+}
+
+.text-dark-1 {
+    color: #5a6375
+}
+
+.bg-dark-1 {
+    background: #5a6375
+}
+
+.text-dark-2 {
+    color: #333958
+}
+
+.bg-dark-2 {
+    background: #333958
+}
+
+.text-dark-3 {
+    color: #1e2341
+}
+
+.bg-dark-3 {
+    background: #1e2341
+}
+
+.text-dark-4 {
+    color: var(--theme-text)
+}
+
+.bg-dark-4 {
+    background: var(--theme-text)
+}
+
+.text-dark-5 {
+    color: #272c46
+}
+
+.bg-dark-5 {
+    background: #272c46
+}
+
+.text-dark-6 {
+    color: #333
+}
+
+.bg-dark-6 {
+    background: #131a3e
+}
+
+.text-active-0 {
+    color: #ffba07
+}
+
+.bg-active-0 {
+    background: #ffba07
+}
+
+.text-grey-border {
+    color: #eaedf6
+}
+
+.bg-grey-border {
+    background: #eaedf6
+}
+
+.text-grey-label {
+    color: #aeb4bd
+}
+
+.bg-grey-label {
+    background: #aeb4bd
+}
+
+.text-grey-font {
+    color: #8a8a8d
+}
+
+.bg-grey-font {
+    background: #8a8a8d
+}
+
+.text-grey-disable {
+    color: #8d9198
+}
+
+.bg-grey-disable {
+    background: #8d9198
+}
+
+.text-warning-error {
+    color: #c31337
+}
+
+.bg-warning-error {
+    background: #c31337
+}
+
+.shadow-1 {
+    box-shadow: 0px 6px 16px rgba(0,0,0,0.08)
+}
+
+.shadow-up-1 {
+    box-shadow: 0px -6px 16px rgba(0,0,0,0.08)
+}
+
+.q-radio__inner {
+    min-width: 0.8em;
+    width: 0.8em
+}
+
+.text-dark-bg-80 {
+    color: rgba(0,0,0,0.8)
+}
+
+.bg-dark-bg-80 {
+    background: rgba(0,0,0,0.8)
+}
+
+.first-play-team {
+    position: relative;
+    padding-left: 10px
+}
+
+.first-play-team:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 5px;
+    border-radius: 5px;
+    margin-left: 2px;
+    background-color: #36bb08
+}
+
+.q-dialog__inner>div {
+    border-radius: 8px
+}
+
+.q-dialog-plugin {
+    background-color: #fff!important;
+    padding: 10px
+}
+
+.q-dialog-plugin .q-dialog__title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333958;
+    font-family: PingFang SC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 10px
+}
+
+.q-dialog-plugin .q-dialog__message {
+    font-size: 14px;
+    color: #333958;
+    margin-bottom: -8px;
+    font-family: PingFang SC;
+    text-align: center;
+    padding-bottom: 50px
+}
+
+.q-dialog-plugin .q-dialog__message p {
+    line-height: 16px;
+    display: flex;
+    justify-content: flex-end
+}
+
+.q-dialog-plugin .q-dialog__message p:last-child {
+    margin-bottom: 6px
+}
+
+.q-dialog-plugin .q-btn {
+    flex: 1
+}
+
+.q-dialog-plugin .q-btn:first-child {
+    color: #aeb4bd!important;
+    background-color: #f4f4f4
+}
+
+.q-dialog-plugin .q-btn:last-child {
+    color: #fff!important;
+    background: var(--theme-text)
+}
+
+.q-tabs--horizontal .q-tabs__arrow--left,.q-tabs--horizontal .q-tabs__arrow--right {
+    display: none
+}
+
+a,body,dd,div,dl,dt,em,h1,h2,h3,h4,h5,html,i,img,input,li,p,span,ul {
+    margin: 0;
+    padding: 0
+}
+
+a,i,img,input {
+    border: none;
+    outline: none
+}
+
+input::-webkit-input-placeholder {
+    font-size: 1.2rem;
+    line-height: normal；
+}
+
+input:-moz-placeholder,input::-moz-placeholder {
+    font-size: 1.2rem;
+    line-height: normal；
+}
+
+input:-ms-input-placeholder {
+    font-size: 1.2rem;
+    line-height: normal；
+}
+
+html {
+    font-size: 10px
+}
+
+body {
+    font-family: PingFang,-apple-system,Helvetica Neue,Helvetica,Arial,sans-serif;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    background-color: #f4f4f4;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+    -webkit-overflow-scrolling: touch;
+    background-attachment: fixed
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+
+li,ul {
+    list-style: none
+}
+
+a,img {
+    -webkit-touch-callout: none
+}
+
+img {
+    max-width: 100%
+}
+
+body,html {
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none
+}
+
+::-webkit-scrollbar {
+    display: none
+}
+
+select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000
+}
+
+@keyframes rotating {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+.pages-bg {
+    background-image: url(/images/top-bg.png);
+    background-color: var(--theme-bg);
+    background-size: 100%;
+    background-repeat: no-repeat
+}
+
+.q-slider__track-container {
+    background-color: #eaedf6;
+    height: 4px;
+    margin-top: -2px
+}
+
+.q-slider__track {
+    color: #eaedf6;
+    height: 4px
+}
+
+.q-date--portrait-standard .q-date__header {
+    background: var(--theme-text)
+}
+
+.matches-is-empty {
+    background-color: #fff;
+    height: 50vh;
+    padding: 4em 0;
+    border-radius: 8px
+}
+
+.iconfont.icon-lock {
+    color: #8d9198
+}
+
+.q-notification__badge {
+    display: none!important
+}
+
+body {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+body .text-h4 {
+    letter-spacing: 0
+}
+
+img {
+    pointer-events: none
+}
+
+.font-size-14 {
+    font-size: 14px
+}
+
+.font-size-12 {
+    font-size: 12px
+}
+
+.font-size-10 {
+    font-size: 10px
+}
+
+.font-size-16 {
+    font-size: 16px
+}
+
+.font-size-18 {
+    font-size: 18px
+}
+
+input::-webkit-inner-spin-button,input::-webkit-outer-spin-button {
+    -webkit-appearance: none
+}
+
+input[type=number] {
+    -moz-appearance: textfield
+}
+
+@keyframes Flashing {
+    0% {
+        margin-top: -3px
+    }
+
+    34% {
+        margin-top: 0
+    }
+
+    75% {
+        margin-top: -3px
+    }
+
+    to {
+        margin-top: 0
+    }
+}
+
+.small-decimal {
+    display: inline-block;
+    transform: scale(0.8) translateX(-8%) translateY(4%)
+}

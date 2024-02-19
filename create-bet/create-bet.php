@@ -112,7 +112,9 @@ if ($_SESSION['email']) {
                 <div class="row">
                     <div class="col-12">
                         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                            <h4 class="mb-sm-0"> <?php echo $value['name'];
+                            <h4 class="mb-sm-0">
+                                <?php
+                                echo $value['name'];
                                 if ($value['id'] == 1) echo "<i style='color:red'>(Lưu ý: Phải để toàn màn hình để không bị lỗi)</i>";
                                 ?>
                             </h4>
@@ -134,6 +136,7 @@ if ($_SESSION['email']) {
 
                             <div id="new-bet-ball" style="width: 591px">
                                 <img id="photo_show" src="photo-bet/photo_1.jpg" style="position: relative" />
+                                <!-- <img id="photo_show" src="photo-bet/1.png" style="position: relative" /> -->
                             </div>
 
                             <div>

@@ -1,0 +1,499 @@
+/* --------------------------------- Refresh ------------------------------------ */
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  margin: 20%;
+}
+/* Loading */
+#loading {
+    background-color: #f9fbfe;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    margin-top: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow: hidden!important;
+    opacity: 0.8;
+    right: 0;
+    z-index: 999999;
+}
+#loading-center {
+    background: url('../create-withdrawal/photo-withdrawal/gif_loaderJ12.png') no-repeat scroll 50%;
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.br_game {
+  height: 3px;
+  background-color: black;
+  width: 90%;
+  margin: 20px auto 0px;
+}
+/* Loading */
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.spinner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1003;
+  background: #000000;
+  opacity: 0.8;
+  overflow: hidden;
+}
+.spinner div:first-child {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border-radius: 50%;
+  box-shadow: 0 3px 3px 0 rgba(255, 56, 106, 1);
+  transform: translate3d(0, 0, 0);
+  animation: spin 2s linear infinite;
+}
+.spinner div:first-child:after,
+.spinner div:first-child:before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+.spinner div:first-child:before {
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  box-shadow: 0 3px 3px 0 rgb(255, 228, 32);
+  -webkit-animation: spin 3s linear infinite;
+  animation: spin 3s linear infinite;
+}
+.spinner div:first-child:after {
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  box-shadow: 0 3px 3px 0 rgba(61, 175, 255, 1);
+  animation: spin 1.5s linear infinite;
+}
+@keyframes loading {
+  0% {
+    transform: scaleY(0.1);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(0.1);
+  }
+}
+/* End Loading */
+
+/* Form */
+.form-label {
+  margin: 0.8rem 0;
+}
+.form-control {
+  float: right;
+  text-align: center;
+  display: inline-block;
+  width: 55%;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--vz-body-color);
+  background-color: var(--vz-input-bg);
+  background-clip: padding-box;
+  border: 1px solid var(--vz-input-border);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0.25rem;
+  -webkit-transition: border-color 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
+}
+.select {
+  width: 55%;
+  padding: 8px;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+  font-size: 16px;
+  color: #555;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, #555 50%),
+    linear-gradient(135deg, #555 50%, transparent 50%),
+    linear-gradient(to right, #ccc, #ccc);
+  background-position: calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px), 100% 0;
+  background-size: 5px 5px, 5px 5px, 2.5em 2.5em;
+  background-repeat: no-repeat;
+  float: right;
+  text-align: center;
+}
+/* End Form */
+
+/* Sóng điện thoại */
+.background_white {
+  background: white;
+}
+.background_black {
+  background: black;
+}
+.background_invi {
+  background: #7a7a7a;
+}
+.signal {
+  height: 20px;
+  width: 40px;
+  position: absolute;
+  top: 24px;
+  left: 463px;
+  z-index: 1;
+}
+.img-signal {
+  position: absolute;
+  top: 75px;
+  left: 782px;
+  z-index: 1;
+}
+.bar {
+  width: 4.5px;
+  border-radius: 1.5px;
+  position: absolute;
+  bottom: 0;
+}
+.img-bar {
+  width: 8.3px;
+  border-radius: 3.5px;
+  position: absolute;
+  bottom: 0;
+}
+.bar:nth-child(1) {
+  height: 7px;
+  left: 1px;
+}
+.bar:nth-child(2) {
+  height: 10px;
+  left: 7px;
+}
+.bar:nth-child(3) {
+  height: 13px;
+  left: 13px;
+}
+.bar:nth-child(4) {
+  height: 16px;
+  left: 19px;
+}
+/*----------------------------------------------------- Sóng điện thoại sim 2 ----------------------------------------------------- */
+.signal-1 {
+  height: 20px;
+  width: 40px;
+  position: absolute;
+  top: 5.5px;
+  left: 304px;
+  z-index: 1;
+}
+.img-signal-1 {
+  position: absolute;
+  top: 64px;
+  left: 782px;
+  z-index: 1;
+}
+.bar-1 {
+  width: 3px;
+  border-radius: 1.2px;
+  position: absolute;
+  bottom: 0;
+}
+.img-bar-1 {
+  width: 8.3px;
+  border-radius: 3.5px;
+  position: absolute;
+  bottom: 0;
+}
+.bar-1:nth-child(1) {
+  height: 4px;
+  left: 4px;
+}
+.img-bar-1:nth-child(1) {
+  height: 9px;
+  left: 1px;
+}
+.bar-1:nth-child(2) {
+  height: 5px;
+  left: 8.6px;
+}
+.img-bar-1:nth-child(2) {
+  height: 12px;
+  left: 12.2px;
+}
+.bar-1:nth-child(3) {
+  height: 6.3px;
+  left: 13.2px;
+}
+.img-bar-1:nth-child(3) {
+  height: 15.3px;
+  left: 23.5px;
+}
+.bar-1:nth-child(4) {
+  height: 7.8px;
+  left: 17.8px;
+}
+.img-bar-1:nth-child(4) {
+  height: 18.9px;
+  left: 35px;
+}
+.signal2 {
+  height: 20px;
+  width: 40px;
+  position: absolute;
+  top: 11px;
+  left: 304px;
+  z-index: 1;
+}
+.img-signal2 {
+  position: absolute;
+  top: 77px;
+  left: 782px;
+  z-index: 1;
+}
+.bar2 {
+  width: 3px;
+  height: 3.7px;
+  border-radius: 1.2px;
+  position: absolute;
+  bottom: 0;
+}
+.img-bar2 {
+  width: 8px;
+  height: 8.7px;
+  border-radius: 3.2px;
+  position: absolute;
+  bottom: 0;
+}
+.bar2:nth-child(1) {
+  left: 4px;
+}
+.img-bar2:nth-child(1) {
+  left: 1px;
+}
+.bar2:nth-child(2) {
+  left: 8.6px;
+}
+.img-bar2:nth-child(2) {
+  left: 12.2px;
+}
+.bar2:nth-child(3) {
+  left: 13.2px;
+}
+.img-bar2:nth-child(3) {
+  left: 23.5px;
+}
+.bar2:nth-child(4) {
+  left: 17.8px;
+}
+.img-bar2:nth-child(4) {
+  left: 35px;
+}
+.data_auto {
+  color: red;
+}
+/* Wifi */
+.wifi {
+  width: 24px;
+  position: absolute;
+  top: 24px;
+  left: 495px;
+  z-index: 1;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: center;
+}
+.img-wifi {
+  width: 45px;
+  position: absolute;
+  top: 35px;
+  left: 840px;
+  z-index: 1;
+  font-size: 30px;
+  font-weight: 500;
+  text-align: center;
+}
+.img_wifi {
+  width: 100%;
+}
+/* ------------------- Pin ------------------ */
+.battery-level {
+  position: absolute;
+  border-radius: 2px;
+  height: 13.8px;
+  width: 28px;
+  top: 28.5px;
+  left: 531.5px;
+}
+
+.ruler {
+  position: fixed;
+  top: 181px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: black;
+  z-index: 9999;
+  pointer-events: none;
+}
+.ruler_doc {
+  position: fixed;
+  top: 0;
+  left: 380px;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 100%;
+  background-color: black;
+  z-index: 1;
+}
+.ruler_doc2 {
+  position: fixed;
+  top: 0;
+  left: 800px;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 100%;
+  background-color: black;
+  z-index: 1;
+}
+.container_box {
+  display: flex;
+}
+.box {
+  margin: 10px;
+}
+.demo_image-container {
+  position: relative;
+}
+.create-image-container {
+  position: relative;
+}
+.photo_style {
+  width: 100%;
+}
+.image-caption {
+  position: absolute;
+  font-size: 18px;
+  top: 10px;
+  left: 20px;
+  color: #e6eaf2;
+  font-weight: 500;
+  font-family: system-ui;
+}
+
+/* Form */
+.form-label {
+    margin: 0.8rem 0;
+  }
+  .form-control {
+    float: right;
+    text-align: center;
+    display: inline-block;
+    width: 55%;
+    padding: .5rem .9rem;
+    font-size: .8125rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--vz-body-color);
+    background-color: var(--vz-input-bg);
+    background-clip: padding-box;
+    border: 1px solid var(--vz-input-border);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    -webkit-transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  }
+  .select {
+    width: 55%;
+    padding: 8px;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+    font-size: 16px;
+    color: #555;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, #555 50%), linear-gradient(135deg, #555 50%, transparent 50%), linear-gradient(to right, #ccc, #ccc);
+    background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), 100% 0;
+    background-size: 5px 5px, 5px 5px, 2.5em 2.5em;
+    background-repeat: no-repeat;
+    float: right;
+    text-align: center;
+  }
+/* End Form */
+.hidden {
+  display: none;
+}
+
+/* ---------------------------- Iphone ----------------------------*/
+  .time-bet1 {
+    position: absolute;
+    top: 16px;
+    left: 35px;
+    color: white;
+    font-size: 24px;
+    width: 46px;
+    font-family: system-ui;
+    font-weight: 700;
+    z-index: 1;
+  }
+  .custom-icon2 {
+    position: absolute;
+    top: 26.5px;
+    left: 105px;
+    width: 15px;
+  }
+/* ---------------------------- Adroid ----------------------------*/

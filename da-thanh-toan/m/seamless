@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="VI" content="notranslate">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="google" content="notranslate"/>
+        <meta name="theme-color" content="#fefef9" media="(prefers-color-scheme: light)"/>
+        <meta name="theme-color" content="#fefef9" media="(prefers-color-scheme: dark)"/>
+        <meta name="viewport" content="viewport-fit=cover,width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+        <link rel="manifest" href="/m/manifest.json?v=19467"/>
+        <meta http-equiv="x-dns-prefetch-control" content="on"/>
+        <link rel="shortcut icon" href="/m/favicon.ico"/>
+        <link rel="stylesheet" href="/m/menu/iconfont.css"/>
+        <title>Bongvip</title>
+        <meta name="title" content="Bongvip"/>
+        <meta name="description" content="Bongvip Nhà cái hàng đầu châu á"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="Bongvip"/>
+        <meta property="og:description" content="Bongvip Nhà cái hàng đầu châu á"/>
+        <meta property="og:image" content="/m/meta-info.png"/>
+        <meta property="twitter:card" content="summary_large_image"/>
+        <meta property="twitter:title" content="Bongvip"/>
+        <meta property="twitter:description" content="Bongvip Nhà cái hàng đầu châu á"/>
+        <meta property="twitter:image" content="/m/meta-info.png"/>
+        <script>
+            // prettier-ignore
+            !function(e, t) {
+                var n = t.documentElement
+                  , i = e.devicePixelRatio || 1
+                  , a = 7.5
+                  , r = 16;
+                function d() {
+                    var e = n.clientWidth / a;
+                    n.style.fontSize = e + "px"
+                }
+                if (i >= 2) {
+                    var o = t.createElement("body")
+                      , c = t.createElement("div");
+                    c.style.border = ".5px solid transparent",
+                    o.appendChild(c),
+                    n.appendChild(o),
+                    1 === c.offsetHeight && n.classList.add("hairlines"),
+                    n.removeChild(o)
+                }
+                !function e() {
+                    if (t.body) {
+                        var i = n.clientWidth / 100 / (a / 2);
+                        t.body.style.fontSize = r * i + "px"
+                    } else
+                        t.addEventListener("DOMContentLoaded", e)
+                }(),
+                d(),
+                e.addEventListener("resize", d),
+                e.addEventListener("pageshow", function(t) {
+                    var n = !1;
+                    try {
+                        if (e.performance) {
+                            const t = e.performance.getEntriesByType("navigation")
+                              , i = !!t[0] && "back_forward" === t[0].type
+                              , a = !!e.performance.navigation && 2 === e.performance.navigation.type;
+                            n = i || a
+                        }
+                    } catch (e) {}
+                    (t.persisted || n) && d()
+                })
+            }(window, document);
+        </script>
+        <script>
+            !function() {
+                var t = "pwa_history_bug"
+                  , n = function() {
+                    if (/iP(hone|od|ad)/.test(window.navigator.platform) || /iP(hone|od|ad)/.test(window.navigator.userAgent))
+                        try {
+                            var t = window.navigator.appVersion.match(/OS (\d+)_(\d+)_?(\d+)?/);
+                            return [parseInt(t[1], 10), parseInt(t[2], 10), parseInt(t[3] || 0, 10)]
+                        } catch (t) {
+                            return []
+                        }
+                    return []
+                }()
+                  , a = n && n[0] && n[0] < 15;
+                "standalone"in window.navigator && window.navigator.standalone && a && !sessionStorage.getItem(t) && (sessionStorage.setItem(t, "1"),
+                window.history.pushState({}, "", location.href))
+            }()
+        </script>
+        <script>
+            !function(u) {
+                var i = window.webpackJsonp;
+                window.webpackJsonp = function(e, n, r) {
+                    for (var t, o, c, a = 0, f = []; a < e.length; a++)
+                        o = e[a],
+                        d[o] && f.push(d[o][0]),
+                        d[o] = 0;
+                    for (t in n)
+                        Object.prototype.hasOwnProperty.call(n, t) && (u[t] = n[t]);
+                    for (i && i(e, n, r); f.length; )
+                        f.shift()();
+                    if (r)
+                        for (a = 0; a < r.length; a++)
+                            c = l(l.s = r[a]);
+                    return c
+                }
+                ;
+                var r = {}
+                  , d = {
+                    26: 0
+                };
+                function l(e) {
+                    if (r[e])
+                        return r[e].exports;
+                    var n = r[e] = {
+                        i: e,
+                        l: !1,
+                        exports: {}
+                    };
+                    return u[e].call(n.exports, n, n.exports, l),
+                    n.l = !0,
+                    n.exports
+                }
+                l.e = function(r) {
+                    var t = d[r];
+                    if (0 === t)
+                        return new Promise(function(e) {
+                            e()
+                        }
+                        );
+                    if (t)
+                        return t[2];
+                    var e = new Promise(function(e, n) {
+                        t = d[r] = [e, n]
+                    }
+                    );
+                    t[2] = e;
+                    var n = document.getElementsByTagName("head")[0]
+                      , o = document.createElement("script");
+                    o.type = "text/javascript",
+                    o.charset = "utf-8",
+                    o.async = !0,
+                    o.timeout = 12e4,
+                    l.nc && o.setAttribute("nonce", l.nc),
+                    o.src = l.p + "" + ({}[r] || r) + "." + {
+                        0: "ef611886",
+                        1: "3e766111",
+                        2: "31d0e473",
+                        3: "2f34b9de",
+                        4: "4dd795fe",
+                        5: "9e0513e3",
+                        6: "b1cd6650",
+                        7: "752bd68f",
+                        8: "fc262260",
+                        9: "888cdbeb",
+                        10: "1bc9d95d",
+                        11: "7f58a911",
+                        12: "fbc1ec72",
+                        13: "10bc5bed",
+                        14: "0bcc160d",
+                        15: "e9bc8acf",
+                        16: "2c2e590c",
+                        17: "e1cb28fe",
+                        18: "4cc09309",
+                        19: "c39b9239",
+                        20: "7124cd05",
+                        21: "41999ef8",
+                        22: "8d0a4430",
+                        23: "28f4e805"
+                    }[r] + ".chunk.js";
+                    var c = setTimeout(a, 12e4);
+                    function a() {
+                        o.onerror = o.onload = null,
+                        clearTimeout(c);
+                        var e = d[r];
+                        0 !== e && (e && e[1](new Error("Loading chunk " + r + " failed.")),
+                        d[r] = void 0)
+                    }
+                    return o.onerror = o.onload = a,
+                    n.appendChild(o),
+                    e
+                }
+                ,
+                l.m = u,
+                l.c = r,
+                l.d = function(e, n, r) {
+                    l.o(e, n) || Object.defineProperty(e, n, {
+                        configurable: !1,
+                        enumerable: !0,
+                        get: r
+                    })
+                }
+                ,
+                l.n = function(e) {
+                    var n = e && e.__esModule ? function() {
+                        return e.default
+                    }
+                    : function() {
+                        return e
+                    }
+                    ;
+                    return l.d(n, "a", n),
+                    n
+                }
+                ,
+                l.o = function(e, n) {
+                    return Object.prototype.hasOwnProperty.call(e, n)
+                }
+                ,
+                l.p = "/m/",
+                l.oe = function(e) {
+                    throw console.error(e),
+                    e
+                }
+            }([])
+        </script>
+        <link href="/m/app.fb0bddc8.css" rel="stylesheet">
+        <link href="/m/splash.8f74586d.css" rel="stylesheet">
+    </head>
+    <body id="home-container" class="bongvip">
+        <div class="loading-img-container"></div>
+        <div id="root"></div>
+        <svg class="svg-gradient">
+            <linearGradient id="SVGID_1" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#b8bdc0"/>
+                <stop offset="50%" stop-color="#dbdbdc"/>
+                <stop offset="100%" stop-color="#b8bdc0"/>
+            </linearGradient>
+        </svg>
+        <svg class="svg-gradient">
+            <linearGradient id="SVGID_2" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#5fa0ff"/>
+                <stop offset="50%" stop-color="#b2d0fd"/>
+                <stop offset="100%" stop-color="#5fa0ff"/>
+            </linearGradient>
+        </svg>
+        <script>
+            "/m/agent" === window.location.pathname ? window.localStorage.setItem("ac", "1") : "/m/index.html" === window.location.pathname && window.localStorage.removeItem("ac")
+        </script>
+        <script>
+            !function() {
+                var e = .01 * window.innerHeight
+                  , t = document.documentElement
+                  , n = e + "px";
+                t.style.getPropertyValue("--vh") !== n && t.style.setProperty("--vh", n)
+            }()
+        </script>
+        <script src="/m/vendor.encrypt.v2.dll.js"></script>
+        <script>
+            document.write("<script type='text/javascript' src='/mobile/mc/loadMemberCenter.js?v=" + (new Date).getTime() + "'><\/script>")
+        </script>
+        <script type="text/javascript" src="/m/app.48ed74cb.js"></script>
+        <script>
+            var brand = 19467;
+            console.log("brand", 19467)
+        </script>
+    </body>
+</html>

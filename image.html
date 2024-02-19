@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload và Hiển thị Hình Ảnh</title>
+</head>
+<body>
+    <h1>Upload và Hiển thị Hình Ảnh</h1>
+    
+    <input type="file" id="imageInput" accept="image/*">
+    <br><br>
+    
+    <img id="imageDisplay" src="" alt="Hình Ảnh">
+</body>
+</html>
+<script>
+
+    const imageInput = document.getElementById('imageInput');
+    const imageDisplay = document.getElementById('imageDisplay');
+
+    imageInput.addEventListener('change', (event) => {
+        const file = event.target.files[0];
+        
+        if (file) {
+            // Đọc hình ảnh thành URL
+            const imageURL = URL.createObjectURL(file);
+            
+            // Hiển thị hình ảnh trên màn hình
+            imageDisplay.src = imageURL;
+        }
+    });
+
+</script>

@@ -1,8 +1,17 @@
+<?php
+    include 'cors.php';
+?>
+
 <div id="layout-wrapper">
     <header id="page-topbar">
         <div class="layout-width">
             <div class="navbar-header">
                 <div class="d-flex align-items-center">
+                    <div class="ms-1 header-item d-none d-sm-flex">
+                        <button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle light-dark-mode">
+                            <i class='bx bx-moon fs-22'></i>
+                        </button>
+                    </div>
                     <div class="dropdown ms-sm-3 header-item topbar-user">
                         <button type="button" class="btn" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="d-flex align-items-center">
@@ -69,13 +78,23 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link menu-link" href="../create-recharge">
+                            <i class="ri-honour-line"></i> <span data-key="t-widgets">Bill nạp tiền</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link menu-link" href="../create-bet">
                             <i class="ri-honour-line"></i> <span data-key="t-widgets">Bill đơn cược</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link menu-link" href="../create-rotation">
-                            <i class="ri-honour-line"></i> <span data-key="t-widgets">Ảnh Vòng Quay</span>
+                        <a class="nav-link menu-link" href="../picture-frame">
+                            <i class="ri-honour-line"></i> <span data-key="t-widgets">Ghép hình vào khung</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link menu-link" href="../tinh-xien">
+                            <i class="ri-honour-line"></i> <span data-key="t-widgets">Tính tiền xiên</span>
                         </a>
                     </li>
             </div>

@@ -82,7 +82,7 @@ if ($_SESSION['email']) {
     <div class="ruler_doc"></div>
     <div class="ruler_doc2"></div> -->
     <!-- Loading -->
-    <div id="loading">
+    <!-- <div id="loading">
         <div id="loading-center"></div>
     </div>
     <div class="modal" id="modal">
@@ -103,7 +103,7 @@ if ($_SESSION['email']) {
             // Lưu thông tin đăng nhập vào localStorage
             localStorage.setItem('lastLoginDate', currentDate);
         }
-    </script>
+    </script> -->
     <?php
         include '../partials/menu.php';
     ?>
@@ -128,13 +128,13 @@ if ($_SESSION['email']) {
                                 </div>
                             </div>
 
-                            <div id="new-bet-ball">
+                            <div id="new-bet-ball" style="width:800px">
                                 <?php if($id == 1) {?>
                                 <img style="width:800px" id="photo_show" src="photo-withdrawal/bongvip_1don.png"/>
                                 <!-- <img style="width:800px" src="photo-withdrawal/demo-bet-1.png" alt="Demo bill" /> -->
                                 <?php } elseif($id == 2) { ?>
                                     <img style="width:800px" id="photo_show" src="photo-withdrawal/mg_1don.png"/>
-                                    <img style="width:800px" src="photo-withdrawal/demo_mg_1.jpg" alt="Demo bill" />
+                                    <!-- <img style="width:800px" src="photo-withdrawal/demo_mg_1.jpg" alt="Demo bill" /> -->
                                 <?php } ?>
                             </div>
                             <div style = "width: 50%; margin-top: 10px">

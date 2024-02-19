@@ -1,0 +1,851 @@
+@font-face {
+    font-family: 'iphone';
+    src: url(../..//font/SFUIDisplay/SFUIDisplay-Medium.otf)
+}
+@font-face {
+    font-family: 'iphone-medium';
+    src: url(../../font/SFUIDisplay/SFUIDisplay-Medium.otf)
+}
+@font-face {
+    font-family: 'iphone-regular';
+    src: url(../../font/SFUIDisplay/SFUIDisplay-Regular.otf)
+}
+@font-face {
+    font-family: 'iphone-semibold';
+    src: url(../font/SFUIDisplay/SFUIDisplay-Semibold.otf)
+}
+@font-face {
+    font-family: 'iphone-light';
+    src: url(../font/SFUIDisplay/SFUIDisplay-Light.ttf)
+}
+@font-face {
+    font-family: 'iphone-heavy';
+    src: url(../font/SFUIDisplay/SFUIDisplay-Heavy.otf)
+}
+/* --------------------------------- Refresh ------------------------------------ */
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.modal-content {
+    width: 80%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    margin: 20% auto;
+}
+
+/* Loading */
+#loading {
+    background-color: #f9fbfe;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    margin-top: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow: hidden !important;
+    opacity: 0.8;
+    right: 0;
+    z-index: 999999;
+}
+
+#loading-center {
+    background: url("../photo-withdrawal/gif_loaderJ12.png") no-repeat scroll 50%;
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.overlay {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes loading {
+    0% {
+        transform: scaleY(0.1);
+    }
+
+    50% {
+        transform: scaleY(1);
+    }
+
+    100% {
+        transform: scaleY(0.1);
+    }
+}
+
+.data_auto {
+    color: red;
+}
+
+/* ------------------ Form Label ----------------- */
+.form-label {
+    margin: 0.8rem 0;
+}
+
+.form-control {
+    float: right;
+    text-align: center;
+    display: inline-block;
+    width: 55%;
+    padding: 0.5rem 0.9rem;
+    font-size: 0.8125rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--vz-body-color);
+    background-color: var(--vz-input-bg);
+    background-clip: padding-box;
+    border: 1px solid var(--vz-input-border);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.25rem;
+    -webkit-transition: border-color 0.15s ease-in-out,
+        -webkit-box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out,
+        -webkit-box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+        -webkit-box-shadow 0.15s ease-in-out;
+}
+
+.select {
+    width: 55%;
+    padding: 8px;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+    font-size: 16px;
+    color: #555;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, #555 50%),
+        linear-gradient(135deg, #555 50%, transparent 50%),
+        linear-gradient(to right, #ccc, #ccc);
+    background-position: calc(100% - 20px) calc(1em + 2px),
+        calc(100% - 15px) calc(1em + 2px), 100% 0;
+    background-size: 5px 5px, 5px 5px, 2.5em 2.5em;
+    background-repeat: no-repeat;
+    float: right;
+    text-align: center;
+}
+
+/* ----------------------------------------------- Css cho đơn 1 rút tiền BV -----------------------------------------------*/
+/* Sóng điện thoại sim 1 */
+.background_white {
+    background: white;
+}
+
+.background_black {
+    background: black;
+}
+
+.background_invi {
+    background: #cdcdcd;
+}
+
+.signal {
+    height: 20px;
+    width: 40px;
+    position: absolute;
+    top: 44px;
+    left: 609px;
+    z-index: 1;
+}
+
+.bar {
+    width: 6px;
+    border-radius: 1.5px;
+    position: absolute;
+    bottom: 0;
+}
+
+.bar:nth-child(1) {
+    height: 8px;
+    left: 6px;
+}
+
+.bar:nth-child(2) {
+    height: 13px;
+    left: 15px;
+}
+
+.bar:nth-child(3) {
+    height: 18px;
+    left: 24px;
+}
+
+.bar:nth-child(4) {
+    height: 23px;
+    left: 33px;
+}
+
+.signal_invi {
+    height: 20px;
+    width: 40px;
+    position: absolute;
+    top: 7.5px;
+    left: 300px;
+    z-index: 1;
+}
+
+.signal1 {
+    height: 20px;
+    width: 40px;
+    position: absolute;
+    top: 37px;
+    left: 609px;
+    z-index: 1;
+}
+
+.bar1 {
+    width: 6px;
+    border-radius: 2px;
+    position: absolute;
+    bottom: 0;
+}
+
+.bar1:nth-child(1) {
+    height: 8px;
+    left: 6px;
+}
+
+.bar1:nth-child(2) {
+    height: 11px;
+    left: 15px;
+}
+
+.bar1:nth-child(3) {
+    height: 14px;
+    left: 24px;
+}
+
+.bar1:nth-child(4) {
+    height: 17px;
+    left: 33px;
+}
+
+.signal2 {
+    height: 20px;
+    width: 40px;
+    position: absolute;
+    top: 48px;
+    left: 609px;
+    z-index: 1;
+}
+
+.bar2 {
+    height: 8px;
+    width: 6px;
+    border-radius: 2px;
+    position: absolute;
+    bottom: 0;
+}
+
+.bar2:nth-child(1) {
+    left: 6px;
+}
+
+.bar2:nth-child(2) {
+    left: 15px;
+}
+
+.bar2:nth-child(3) {
+    left: 24px;
+}
+
+.bar2:nth-child(4) {
+    left: 33px;
+}
+
+/* ------------------- Pin ------------------ */
+.ruler {
+    position: fixed;
+    top: 181px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: black;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+.ruler_doc {
+    position: fixed;
+    top: 0;
+    left: 380px;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 100%;
+    background-color: black;
+    z-index: 1;
+}
+
+.ruler_doc2 {
+    position: fixed;
+    top: 0;
+    left: 800px;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 100%;
+    background-color: black;
+    z-index: 1;
+}
+
+.container_box {
+    display: flex;
+}
+
+.box {
+    margin: 10px;
+}
+
+.br_game {
+    height: 3px;
+    background-color: black;
+    width: 90%;
+    margin: 10px auto;
+}
+
+.br_ngang1 {
+    position: absolute;
+    max-width: 5px;
+    height: 55%;
+    background: black;
+    border-radius: 16px;
+    left: 50%;
+    padding: 0;
+    margin-top: 35px;
+}
+
+#new-bet-ball {
+    position: relative;
+}
+
+.h4-don1 {
+    color: #ff0000a3;
+    text-align: center;
+}
+
+.clock {
+    position: absolute;
+    font-size: 31px;
+    top: 30px;
+    left: 58px;
+    z-index: 1;
+    font-family: 'iphone-medium';
+    font-weight: 700;
+}
+
+.battery {
+    position: absolute;
+    top: 40px;
+    left: 708px;
+    width: 43px;
+    background: black;
+    height: 24px;
+    border-radius: 7px 0px 0px 7px;
+}
+
+.wifi {
+    width: 32px;
+    position: absolute;
+    top: 40px;
+    left: 663px;
+    z-index: 1;
+}
+
+.wifi-text {
+    width: 32px;
+    position: absolute;
+    top: 35px;
+    left: 662px;
+    z-index: 1;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.text_battery {
+    position: absolute;
+    top: 36px;
+    left: 709px;
+    width: 43px;
+    text-align: center;
+    color: #fcfcfcf0;
+    font-size: 21px;
+    font-family: arial;
+    font-weight: 550;
+}
+.custom_icon {
+    position: absolute;
+    width: 18px;
+    top: 45px;
+    left: 146px;
+}
+.time {
+    position: absolute;
+    top: 317px;
+    left: 75px;
+    width: 182px;
+    text-align: center;
+    font-family: arial;
+    font-size: 22px;
+    color: #208bc9;
+    font-weight: 500;
+}
+.bank {
+    position: absolute;
+    top: 430px;
+    left: 77px;
+    font-size: 34px;
+    font-weight: bold;
+}
+.detail_time {
+    position: absolute;
+    top: 434px;
+    left: 433px;
+    font-size: 27px;
+    font-family: arial;
+}
+.trang_thai {
+    position: absolute;
+    top: 505px;
+    left: 595px;
+    font-family: arial;
+    z-index: 1;
+    font-size: 32px;
+}
+.withdrawal {
+    position: absolute;
+    top: 591px;
+    left: 90px;
+    font-family: 'iphone';
+    font-size: 33px;
+    font-weight: 600;
+    color: #e24b47;
+}
+.trade_code {
+    position: absolute;
+    top: 591px;
+    left: 322px;
+    font-family: arial;
+    font-size: 33px;
+    font-weight: 600;
+    color: #2bdbaf;
+}
+.status {
+    position: absolute;
+    top: 591px;
+    left: 583px;
+    font-family: arial;
+    font-size: 33px;
+    width: 175px;
+    text-align: center;
+}
+.total_withdrawal {
+    position: absolute;
+    top: 1666px;
+    left: 500px;
+    font-family: arial;
+    font-weight: 500;
+    font-size: 33px;
+}
+
+/* ----------------------------------------------- Css cho đơn 2 rút tiền BV -----------------------------------------------*/
+.signal_v2 {
+    height: 20px;
+    width: 40px;
+    position: absolute;
+    top: 34px;
+    left: 609px;
+    z-index: 1;
+}
+
+.text-url {
+    position: absolute;
+    font-size: 31px;
+    top: 117px;
+    left: 178px;
+    z-index: 1;
+    font-family: 'iphone';
+    color: #000000c2;
+}
+
+.bar_v2 {
+    width: 6px;
+    border-radius: 1.5px;
+    position: absolute;
+    bottom: 0;
+}
+
+.bar_v2:nth-child(1) {
+    height: 8px;
+    left: 6px;
+}
+
+.bar_v2:nth-child(2) {
+    height: 13px;
+    left: 15px;
+}
+
+.bar_v2:nth-child(3) {
+    height: 18px;
+    left: 24px;
+}
+
+.bar_v2:nth-child(4) {
+    height: 23px;
+    left: 33px;
+}
+
+.signal_invi_v2 {
+    height: 20px;
+    width: 40px;
+    position: absolute;
+    top: 7.5px;
+    left: 300px;
+    z-index: 1;
+}
+
+.signal1_v2 {
+    height: 20px;
+    width: 40px;
+    position: absolute;
+    top: 28px;
+    left: 609px;
+    z-index: 1;
+}
+
+.bar1_v2 {
+    width: 6px;
+    border-radius: 2px;
+    position: absolute;
+    bottom: 0;
+}
+
+.bar1_v2:nth-child(1) {
+    height: 8px;
+    left: 6px;
+}
+
+.bar1_v2:nth-child(2) {
+    height: 11px;
+    left: 15px;
+}
+
+.bar1_v2:nth-child(3) {
+    height: 14px;
+    left: 24px;
+}
+
+.bar1_v2:nth-child(4) {
+    height: 17px;
+    left: 33px;
+}
+
+.signal2_v2 {
+    height: 20px;
+    width: 40px;
+    position: absolute;
+    top: 39px;
+    left: 609px;
+    z-index: 1;
+}
+
+.bar2_v2 {
+    height: 8px;
+    width: 6px;
+    border-radius: 2px;
+    position: absolute;
+    bottom: 0;
+}
+
+.bar2_v2:nth-child(1) {
+    left: 6px;
+}
+
+.bar2_v2:nth-child(2) {
+    left: 15px;
+}
+
+.bar2_v2:nth-child(3) {
+    left: 24px;
+}
+
+.bar2_v2:nth-child(4) {
+    left: 33px;
+}
+
+.clock_v2 {
+    position: absolute;
+    font-size: 31px;
+    top: 21px;
+    left: 58px;
+    z-index: 1;
+    font-family: 'iphone-medium';
+    font-weight: 700;
+}
+
+.battery_v2 {
+    position: absolute;
+    top: 31px;
+    left: 708px;
+    width: 43px;
+    background: black;
+    height: 24px;
+    border-radius: 7px 0px 0px 7px;
+}
+
+.wifi_v2 {
+    width: 32px;
+    position: absolute;
+    top: 30px;
+    left: 663px;
+    z-index: 1;
+}
+
+.wifi-text_v2 {
+    width: 32px;
+    position: absolute;
+    top: 25px;
+    left: 662px;
+    z-index: 1;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.text_battery_v2 {
+    position: absolute;
+    top: 26px;
+    left: 709px;
+    width: 43px;
+    text-align: center;
+    color: #fcfcfcf0;
+    font-size: 21px;
+    font-family: arial;
+    font-weight: 550;
+}
+.custom_icon_v2 {
+    position: absolute;
+    width: 18px;
+    top: 35px;
+    left: 146px;
+}
+.time_v2 {
+    position: absolute;
+    top: 424px;
+    left: 75px;
+    width: 182px;
+    text-align: center;
+    font-family: arial;
+    font-size: 22px;
+    color: #208bc9;
+    font-weight: 500;
+}
+.bank_v2 {
+    position: absolute;
+    top: 537px;
+    left: 77px;
+    font-size: 34px;
+    font-weight: bold;
+}
+.detail_time_v2 {
+    position: absolute;
+    top: 545px;
+    left: 433px;
+    font-size: 27px;
+    font-family: arial;
+}
+.trang_thai_v2 {
+    position: absolute;
+    top: 611px;
+    left: 595px;
+    font-family: arial;
+    z-index: 1;
+    font-size: 32px;
+}
+.withdrawal_v2 {
+    position: absolute;
+    top: 699px;
+    left: 90px;
+    font-family: arial;
+    font-size: 33px;
+    font-weight: 600;
+    color: #e24b47;
+}
+.trade_code_v2 {
+    position: absolute;
+    top: 699px;
+    left: 322px;
+    font-family: arial;
+    font-size: 33px;
+    font-weight: 600;
+    color: #2bdbaf;
+}
+.status_v2 {
+    position: absolute;
+    top: 699px;
+    left: 583px;
+    font-family: arial;
+    font-size: 33px;
+    width: 175px;
+    text-align: center;
+}
+.total_withdrawal_v2 {
+    position: absolute;
+    top: 1493px;
+    left: 500px;
+    font-family: arial;
+    font-weight: 500;
+    font-size: 33px;
+}
+
+/* Đơn cược thứ 2 */
+.bank_v2_d2 {
+    position: absolute;
+    top: 893px;
+    left: 77px;
+    font-size: 34px;
+    font-weight: bold;
+}
+.detail_time_v2_d2 {
+    position: absolute;
+    top: 899px;
+    left: 433px;
+    font-size: 27px;
+    font-family: arial;
+}
+.trang_thai_v2_d2 {
+    position: absolute;
+    top: 967px;
+    left: 595px;
+    font-family: arial;
+    z-index: 1;
+    font-size: 32px;
+}
+.withdrawal_v2_d2 {
+    position: absolute;
+    top: 1054px;
+    left: 90px;
+    font-family: arial;
+    font-size: 33px;
+    font-weight: 600;
+    color: #e24b47;
+}
+.trade_code_v2_d2 {
+    position: absolute;
+    top: 1054px;
+    left: 322px;
+    font-family: arial;
+    font-size: 33px;
+    font-weight: 600;
+    color: #2bdbaf;
+}
+.status_v2_d2 {
+    position: absolute;
+    top: 1054px;
+    left: 583px;
+    font-family: arial;
+    font-size: 33px;
+    width: 175px;
+    text-align: center;
+}
+.total_withdrawal_v2_d2 {
+    position: absolute;
+    top: 1666px;
+    left: 500px;
+    font-family: arial;
+    font-weight: 500;
+    font-size: 33px;
+}
+/* End đơn cược thứ 2 */
+
+/* Đơn cược thứ 3 */
+.bank_v2_d3 {
+    position: absolute;
+    top: 1250px;
+    left: 77px;
+    font-size: 34px;
+    font-weight: bold;
+}
+.detail_time_v2_d3 {
+    position: absolute;
+    top: 1258px;
+    left: 433px;
+    font-size: 27px;
+    font-family: arial;
+}
+.trang_thai_v2_d3 {
+    position: absolute;
+    top: 1325px;
+    left: 595px;
+    font-family: arial;
+    z-index: 1;
+    font-size: 32px;
+}
+.withdrawal_v2_d3 {
+    position: absolute;
+    top: 1410px;
+    left: 90px;
+    font-family: arial;
+    font-size: 33px;
+    font-weight: 600;
+    color: #e24b47;
+}
+.trade_code_v2_d3 {
+    position: absolute;
+    top: 1410px;
+    left: 322px;
+    font-family: arial;
+    font-size: 33px;
+    font-weight: 600;
+    color: #2bdbaf;
+}
+.bank_d3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.status_v2_d3 {
+    position: absolute;
+    top: 1410px;
+    left: 583px;
+    font-family: arial;
+    font-size: 33px;
+    width: 175px;
+    text-align: center;
+}
+.total_money {
+    margin-top: 50px;
+}
+/* End đơn cược thứ 3 */

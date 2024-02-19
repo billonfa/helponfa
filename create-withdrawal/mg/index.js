@@ -485,7 +485,7 @@ function import_data1(div_import) {
     const photo_demo = document.createElement('img')
     photo_demo.src = 'photo-withdrawal/demo_mg_1.jpg'
     photo_demo.style.width = '800px'
-    div_import.append(photo_don1, photo_demo)
+    div_import.append(photo_don1)
 
     const clock = document.createElement('div')
     clock.classList.add('clock')
@@ -611,7 +611,7 @@ function import_data2(div_import) {
     const photo_demo = document.createElement('img')
     photo_demo.src = 'photo-withdrawal/demo_mg_1.jpg'
     photo_demo.style.width = '800px'
-    div_import.append(photo_don1, photo_demo)
+    div_import.append(photo_don1)
 
     const clock = document.createElement('div')
     clock.classList.add('clock_v2')
@@ -762,7 +762,7 @@ function import_data3(div_import) {
     const photo_demo = document.createElement('img')
     photo_demo.src = 'photo-withdrawal/demo_mg_1.jpg'
     photo_demo.style.width = '800px'
-    div_import.append(photo_don1, photo_demo)
+    div_import.append(photo_don1)
 
     const clock = document.createElement('div')
     clock.classList.add('clock_v2')

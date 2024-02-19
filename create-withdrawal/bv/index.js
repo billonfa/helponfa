@@ -214,7 +214,7 @@ label_time.textContent = "Thời gian rút tiền"
 label_time.appendChild(data_auto.cloneNode(true))
 const input_time = document.createElement('input')
 input_time.classList.add("form-control")
-input_time.value = `${tinhNgayThang(-7)} - ${tinhNgayThang(0)}`
+input_time.value = `${tinhNgayThang(0)} - ${tinhNgayThang(0)}`
 div_time.append(label_time, input_time)
 
 
@@ -439,14 +439,17 @@ select_orders.addEventListener('change', function () {
     if (select_orders.value == 1) {
         right_mid.innerHTML = ''
         left_bot.innerHTML = ''
+        input_time.value = `${tinhNgayThang(0)} - ${tinhNgayThang(0)}`
         photo_show.src = 'photo-withdrawal/bongvip_1don.png'
     } else if (select_orders.value == 2) {
         left_bot.innerHTML = ''
         right_mid.append(h4_don2, div_detail_time_d2, div_status_d2, div_price_d2, bank_d2)
+        input_time.value = `${tinhNgayThang(0)} - ${tinhNgayThang(0)}`
         photo_show.src = 'photo-withdrawal/bongvip_2don.png'
     } else if (select_orders.value == 3) {
         right_mid.append(h4_don2, div_detail_time_d2, div_status_d2, div_price_d2, bank_d2)
         left_bot.append(h4_don3, div_detail_time_d3, div_status_d3, div_price_d3, bank_d3)
+        input_time.value = `${tinhNgayThang(-7)} - ${tinhNgayThang(0)}`
         photo_show.src = 'photo-withdrawal/bongvip_3don.png'
     }
 })
@@ -496,16 +499,15 @@ function tinhNgayThang(soNgay) {
     if (soNgay !== 0) {
         const ngayDaThayDoi = new Date(hienTai);
         ngayDaThayDoi.setDate(hienTai.getDate() + soNgay);
-        const ngay = themSo0(ngayDaThayDoi.getDate());
         const thang = themSo0(ngayDaThayDoi.getMonth() + 1);
-        return `${ngay}/${thang}`;
+        const ngay = themSo0(ngayDaThayDoi.getDate());
+        return `${thang}/${ngay}`;
     } else {
         const ngay = themSo0(hienTai.getDate());
         const thang = themSo0(hienTai.getMonth() + 1);
-        return `${ngay}/${thang}`;
+        return `${thang}/${ngay}`;
     }
 }
-
 function hours_minutes() {
     const now = new Date();
     let hour = now.getHours();
@@ -640,7 +642,6 @@ function import_data1(div_import) {
         img_custom_icon.src = '../photo/location_black.png'
     }
     custom_icon.appendChild(img_custom_icon)
-    input_time.value = `${tinhNgayThang(0)} - ${tinhNgayThang(0)}`
 
     div_import.append(clock, battery, text_battery, wifi, custom_icon)
     // End Phụ trợ của điện thoại
@@ -682,7 +683,7 @@ function import_data1(div_import) {
 
     const trade_code = document.createElement('div')
     trade_code.classList.add('trade_code')
-    trade_code.textContent = getRandomInt(1000000000, 9999999999)
+    trade_code.textContent = '1245' + getRandomInt(100000, 999999)
 
     const status_import = document.createElement('div')
     status_import.classList.add('status')
@@ -798,7 +799,6 @@ function import_data2(div_import) {
         img_custom_icon.src = '../photo/location_black.png'
     }
     custom_icon.appendChild(img_custom_icon)
-    input_time.value = `${tinhNgayThang(0)} - ${tinhNgayThang(0)}`
 
     div_import.append(clock, battery, text_battery, wifi, custom_icon)
     // End Phụ trợ của điện thoại
@@ -837,7 +837,7 @@ function import_data2(div_import) {
     withdrawal.textContent = (input_price.value) + '.00'
 
     const trade_code = document.createElement('div')
-    const number_trade_code = getRandomInt(1000000000, 9999999999)
+    const number_trade_code = '1245' + getRandomInt(100000, 999999)
     trade_code.classList.add('trade_code_v2')
     trade_code.textContent = number_trade_code
 
@@ -999,7 +999,6 @@ function import_data3(div_import) {
         img_custom_icon.src = '../photo/location_black.png'
     }
     custom_icon.appendChild(img_custom_icon)
-    input_time.value = `${tinhNgayThang(-7)} - ${tinhNgayThang(0)}`
 
     div_import.append(clock, battery, text_battery, wifi, custom_icon)
     // End Phụ trợ của điện thoại
@@ -1038,7 +1037,7 @@ function import_data3(div_import) {
     withdrawal.textContent = (input_price.value) + '.00'
 
     const trade_code = document.createElement('div')
-    const number_trade_code = getRandomInt(1000000000, 9999999999)
+    const number_trade_code = '1245' + getRandomInt(100000, 999999)
     trade_code.classList.add('trade_code_v2')
     trade_code.textContent = number_trade_code
 
@@ -1080,7 +1079,7 @@ function import_data3(div_import) {
 
     const trade_code_d2 = document.createElement('div')
     trade_code_d2.classList.add('trade_code_v2_d2')
-    trade_code_d2.textContent = number_trade_code - getRandomInt(11000, 1000000)
+    trade_code_d2.textContent = number_trade_code - getRandomInt(1000, 10000)
 
     const status_import_d2 = document.createElement('div')
     status_import_d2.classList.add('status_v2_d2')
@@ -1130,7 +1129,7 @@ function import_data3(div_import) {
 
     const trade_code_d3 = document.createElement('div')
     trade_code_d3.classList.add('trade_code_v2_d3')
-    trade_code_d3.textContent = number_trade_code - getRandomInt(100, 10000)
+    trade_code_d3.textContent = number_trade_code - getRandomInt(11000, 50000)
 
     var new_price = input_price.value.replace(/,/g,"")
     var new_price_d2 = input_price_d2.value.replace(/,/g,"")
